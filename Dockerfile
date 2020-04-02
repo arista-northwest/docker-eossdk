@@ -5,8 +5,7 @@ ENV CROSS_COMPILER_DIR=/opt/arista/centos7.5-gcc6.5.0-glibc2.17
 ENV EOSSDK_STUBS_VER=2.11.0
 
 RUN apt-get update && \
-        apt-get install -y dos2unix rpm git curl unzip && \
-        apt-get install -y libtool automake autoconf && \
+        apt-get install -y libtool automake && \
         apt-get install -y build-essential
 
 ADD deps deps
