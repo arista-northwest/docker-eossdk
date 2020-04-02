@@ -1,7 +1,4 @@
-EOSSDK_REVISION := SDK_2_11_0
-
-EOS_CFLAGS := $(INC_CFLAGS) -Os -g -pipe -Wall -U_FORTIFY_SOURCE -Wp,-D_FORTIFY_SOURCE=0 -fexceptions -fstack-protector \
-               -Wno-unused -Wno-uninitialized \
+EOS_CFLAGS := $(INC_CFLAGS) -Os -g -pipe -Wall -fexceptions -fstack-protector -Wno-unused -Wno-uninitialized \
                -mtune=atom -fasynchronous-unwind-tables
 
 .phony : clean
