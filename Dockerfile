@@ -6,7 +6,8 @@ ENV EOSSDK_STUBS_VER=2.11.0
 
 RUN apt-get update && \
         apt-get install -y libtool automake && \
-        apt-get install -y build-essential
+        apt-get install -y build-essential && \
+        apt-get install -y g++-multilib gcc-multilib
 
 ADD deps deps
 
