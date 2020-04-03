@@ -14,12 +14,12 @@ RUN dpkg -i deps/${CROSS_COMPILER_DEB}
 
 ENV PATH=${CROSS_COMPILER_DIR}/bin:$PATH
 
-# RUN \
-#     tar -xvf deps/EosSdk-stubs-${EOSSDK_STUBS_VER}*.tar.gz && \
-#     cd EosSdk-stubs-${EOSSDK_STUBS_VER} && \
-#     ./bootstrap && \
-#     ./build.sh --m32 && \
-#     make install
+RUN \
+    tar -xvf deps/EosSdk-stubs-${EOSSDK_STUBS_VER}*.tar.gz && \
+    cd EosSdk-stubs-${EOSSDK_STUBS_VER} && \
+    ./bootstrap && \
+    ./build.sh --m32 && \
+    make install
 
 VOLUME ["/project"]
 WORKDIR /project
